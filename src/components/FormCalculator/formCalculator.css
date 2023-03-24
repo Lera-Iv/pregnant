@@ -1,0 +1,88 @@
+:root {
+  --primaryColor: rgb(246, 112, 9);
+  --hoverColor: rgb(203, 94, 11);
+  --whiteColor: rgb(255, 255, 255);
+  --blackColor: rgb(46, 46, 46);
+  --textColor: rgb(121, 121, 124);
+  --whiteColorDeam: rgb(237, 237, 237);
+  --greyBg: rgb(245, 245, 245);
+  --greyText: rgb(190, 190, 190);
+  --imputColor: rgb(248, 246, 247);
+}
+
+.homeCalculator {
+  width: 45%;
+  border-radius: 1rem;
+  border: 2px solid var(--greyText);
+  padding: 2rem;
+  background: var(--whiteColor);
+  position: absolute;
+  top: 8rem;
+  left: -500%;
+  gap: 1rem;
+  justify-content: center;
+  transform: translate(-50%);
+  z-index: 100;
+  transition: 1s ease;
+}
+.homeCalculator .genderDiv,
+.homeCalculator .periodDiv {
+  width: 100%;
+}
+.homeCalculator .genderDiv label,
+.homeCalculator .periodDiv label {
+  display: block;
+  color: var(--textColor);
+  font-weight: 500;
+  font-size: 13px;
+  padding-bottom: 0.7rem;
+  margin-top: 0.4rem;
+}
+.homeCalculator .genderDiv input, .homeCalculator .genderDiv select,
+.homeCalculator .periodDiv input,
+.homeCalculator .periodDiv select {
+  width: 100%;
+  background: var(--imputColor);
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.homeCalculator .genderDiv input::-moz-placeholder, .homeCalculator .genderDiv select::-moz-placeholder, .homeCalculator .periodDiv input::-moz-placeholder, .homeCalculator .periodDiv select::-moz-placeholder {
+  font-size: 13px;
+  opacity: 0.5;
+  font-weight: 400;
+}
+.homeCalculator .genderDiv input::placeholder, .homeCalculator .genderDiv select::placeholder,
+.homeCalculator .periodDiv input::placeholder,
+.homeCalculator .periodDiv select::placeholder {
+  font-size: 13px;
+  opacity: 0.5;
+  font-weight: 400;
+}
+.homeCalculator .genderDiv input:focus, .homeCalculator .genderDiv select:focus,
+.homeCalculator .periodDiv input:focus,
+.homeCalculator .periodDiv select:focus {
+  outline: none;
+}
+.homeCalculator .btn {
+  width: 100%;
+  padding: 0.6rem 1.5rem;
+  color: var(--whiteColor);
+  font-weight: 600;
+}
+
+.active {
+  left: 50%;
+}
+
+.closeForm {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  color: var(--primaryColor);
+}
+.closeForm:hover {
+  color: var(--hoverColor);
+}/*# sourceMappingURL=formCalculator.css.map */

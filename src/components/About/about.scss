@@ -1,0 +1,52 @@
+:root {
+    --primaryColor: rgb(246, 112, 9);
+    --hoverColor: rgb(203, 94, 11);
+    --whiteColor: rgb(255, 255, 255);
+    --blackColor: rgb(46, 46, 46);
+    --textColor: rgb(121, 121, 124);
+    --whiteColorDeam: rgb(237, 237, 237);
+    --greyBg: rgb(245, 245, 245);
+    --greyText: rgb(190, 190, 190);
+    --imputColor: rgb(248, 246, 247);
+}
+
+.about {
+    background: thistle;
+    .secContainer {
+        .title {
+            color: var(--blackColor);
+            line-height: 2rem;
+            padding-bottom: 1.5rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .mainContent {
+            padding: 2rem;
+            gap: 1rem;
+
+            .singleItem {
+                text-align: center;
+
+                img {
+                    background: var(--greyBg);
+                    width: 200px;
+                    border-radius: 50%;
+                }
+
+                h3 {
+                    font-weight: 700;
+                    color: var(--blackColor);
+                    padding: .5rem;
+                }
+
+                p {
+                    font-size: 13px;
+                    font-weight: 500;
+                    padding-bottom: .5rem;
+                    color: var(--textColor);
+                }
+            }
+        }
+    }
+}

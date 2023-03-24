@@ -1,0 +1,45 @@
+:root {
+  --primaryColor: rgb(246, 112, 9);
+  --hoverColor: rgb(203, 94, 11);
+  --whiteColor: rgb(255, 255, 255);
+  --blackColor: rgb(46, 46, 46);
+  --textColor: rgb(121, 121, 124);
+  --whiteColorDeam: rgb(237, 237, 237);
+  --greyBg: rgb(245, 245, 245);
+  --greyText: rgb(190, 190, 190);
+  --imputColor: rgb(248, 246, 247);
+}
+
+.about {
+  background: thistle;
+}
+.about .secContainer .title {
+  color: var(--blackColor);
+  line-height: 2rem;
+  padding-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.about .secContainer .mainContent {
+  padding: 2rem;
+  gap: 1rem;
+}
+.about .secContainer .mainContent .singleItem {
+  text-align: center;
+}
+.about .secContainer .mainContent .singleItem img {
+  background: var(--greyBg);
+  width: 200px;
+  border-radius: 50%;
+}
+.about .secContainer .mainContent .singleItem h3 {
+  font-weight: 700;
+  color: var(--blackColor);
+  padding: 0.5rem;
+}
+.about .secContainer .mainContent .singleItem p {
+  font-size: 13px;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  color: var(--textColor);
+}/*# sourceMappingURL=about.css.map */

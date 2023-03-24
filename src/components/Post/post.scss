@@ -1,0 +1,106 @@
+:root {
+    --primaryColor: rgb(246, 112, 9);
+    --hoverColor: rgb(203, 94, 11);
+    --whiteColor: rgb(255, 255, 255);
+    --blackColor: rgb(46, 46, 46);
+    --textColor: rgb(121, 121, 124);
+    --whiteColorDeam: rgb(237, 237, 237);
+    --greyBg: rgb(245, 245, 245);
+    --greyText: rgb(190, 190, 190);
+    --imputColor: rgb(248, 246, 247);
+}
+
+
+
+.singlePost {
+    gap: 2rem;
+    background: var(--greyBg);
+    border-radius: 25px;
+    padding-top: 2rem;
+    border: 2px solid var(--greyText);
+
+    .imgDiv {
+        margin: 0 auto;
+        height: 200px;
+        width: 80%;
+        border-radius: 1rem;
+        border: 5px solid var(--greyBg);
+        box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.406);
+        overflow: hidden;
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+                transition: 3s ease;
+            }
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .postDetails {
+
+        h3 {
+            color: var(--blackColor);
+            font-weight: 600;
+            padding-bottom: 10px;
+            padding: 1rem 2rem;
+        }
+
+        p {
+            font-size: 13px;
+            color: var(--greyText);
+            font-weight: 500;
+            padding: 0 2rem;
+        }
+    }
+
+    a {
+        font-size: 15px;
+        color: var(--primaryColor);
+        font-weight: 600;
+        padding-top: .7rem;
+        width: max-content;
+        margin-bottom: 1.5rem;
+        padding-left: 3rem;
+
+        &:hover {
+            color: var(--hoverColor);
+            font-weight: 600;
+
+            .icon {
+                transform: translateX(10px);
+            }
+        }
+    }
+}
+@media (min-width: 556px) {
+    .singlePost {
+        grid-template-columns:repeat(2, 1fr);
+        margin-bottom: 1rem;
+    }
+
+
+}
+
+@media (min-width: 556px) {
+    .singlePost {
+        grid-template-columns:repeat(2, 1fr);
+        // margin-bottom: 2rem;
+    }
+
+
+}
+
+@media (max-width: 774px) {
+    .singlePost {
+        grid-template-columns:repeat(1, 1fr);
+        
+        .postDetails{
+            margin-bottom: 1rem;
+        }
+    }
+}

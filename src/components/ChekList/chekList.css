@@ -1,0 +1,31 @@
+.todoItem {
+  padding-top: 4rem;
+  background: thistle;
+  background-repeat: no-repeat;
+  position: center left;
+}
+.todoItem .secTitle {
+  padding-top: 2rem;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blackColor);
+}
+.todoItem .mainContainer {
+  padding: 0.8rem 6rem;
+  text-align: start;
+}
+.todoItem .mainContainer .titleDiv {
+  height: 2rem;
+  width: 100%;
+  border-radius: 1rem;
+  border: 3px solid var(--greyText);
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.406);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: var(--greyBg);
+  color: var(--blackColor);
+  text-align: center;
+}
+.todoItem .mainContainer h3 {
+  color: var(--primaryColor);
+}/*# sourceMappingURL=chekList.css.map */

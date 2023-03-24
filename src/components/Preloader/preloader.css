@@ -1,0 +1,11 @@
+.SecPreloader {
+  height: 100vh;
+}
+.SecPreloader .preloader {
+  position: fixed;
+  top: 30%;
+  left: 40%;
+}
+.SecPreloader .preloader img {
+  width: 80%;
+}/*# sourceMappingURL=preloader.css.map */

@@ -1,0 +1,163 @@
+:root {
+  --primaryColor: rgb(246, 112, 9);
+  --hoverColor: rgb(203, 94, 11);
+  --whiteColor: rgb(255, 255, 255);
+  --blackColor: rgb(46, 46, 46);
+  --textColor: rgb(121, 121, 124);
+  --whiteColorDeam: rgb(237, 237, 237);
+  --greyBg: rgb(245, 245, 245);
+  --greyText: rgb(190, 190, 190);
+  --imputColor: rgb(248, 246, 247);
+}
+
+.navBarSection .header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  width: 100%;
+  padding: 1rem;
+  z-index: 100;
+}
+.navBarSection .header .logoDiv .logo {
+  color: var(--whiteColor);
+  font-weight: 500;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.navBarSection .header .logoDiv .logo .icon {
+  color: var(--primaryColor);
+  font-size: 25px;
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .navBarSection .header .navBar {
+    background: var(--greyBg);
+    position: absolute;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 1rem;
+    width: 100%;
+    top: 0;
+    left: -500%;
+    box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
+    transition: 0.3s ease;
+    z-index: 100;
+  }
+  .navBarSection .header .navBar .navList {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  .navBarSection .header .navBar .navList .navItem {
+    padding: 1rem;
+  }
+  .navBarSection .header .navBar .navList .navItem .navLink {
+    color: var(--textColor);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .navBarSection .header .navBar .navList .navItem .navLink:hover {
+    color: var(--primaryColor);
+  }
+  .navBarSection .header .navBar .navList .headerBtns {
+    flex-direction: column;
+  }
+  .navBarSection .header .navBar .navList .headerBtns .btn {
+    margin-top: 1rem;
+  }
+  .navBarSection .header .navBar .navList .headerBtns .btn a {
+    font-weight: 600;
+  }
+  .navBarSection .header .navBar .navList .headerBtns .btn a:hover {
+    color: var(--whiteColor);
+  }
+  .navBarSection .header .navBar .navList .headerBtns .loginBtn {
+    background: none;
+    border: 1px solid var(--primaryColor);
+  }
+  .navBarSection .header .navBar .navList .headerBtns .loginBtn a {
+    color: var(--primaryColor);
+  }
+  .navBarSection .header .navBar .navList .headerBtns .loginBtn:hover {
+    background: var(--hoverColor);
+  }
+  .navBarSection .header .navBar .navList .headerBtns .loginBtn:hover a {
+    color: var(--whiteColor);
+  }
+  .navBarSection .header .navBar .closeNavbar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--primaryColor);
+  }
+  .navBarSection .header .navBar .closeNavbar:hover {
+    color: var(--hoverColor);
+  }
+  .navBarSection .header .activeNavbar {
+    left: 0;
+  }
+}
+.navBarSection .header .toggleNavbar .icon {
+  font-size: 35px;
+  color: var(--whiteColor);
+}
+.navBarSection .header .toggleNavbar .icon:hover {
+  color: var(--primaryColor);
+}
+.navBarSection .activeHeader {
+  background: var(--greyText);
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.45);
+}
+
+@media (min-width: 769px) {
+  .toggleNavbar, .closeNavbar {
+    display: none;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  .header .navBar .navList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .header .navBar .navList .navItem .navLink {
+    color: var(--whiteColor);
+    padding: 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  .header .navBar .navList .navItem .navLink:hover {
+    color: var(--primaryColor);
+  }
+  .header .navBar .navList .btn {
+    margin-left: 1rem;
+  }
+  .header .navBar .navList .btn a {
+    color: var(--whiteColor);
+    font-weight: 500;
+  }
+  .header .navBar .navList .loginBtn {
+    background: none;
+    border: 1px solid var(--primaryColor);
+  }
+  .header .navBar .navList .loginBtn:hover {
+    background: var(--primaryColor);
+  }
+  .header .navBar .navList .loginBtn:hover a {
+    color: var(--whiteColor);
+  }
+  .header .navBar .navList .signUpBtn {
+    margin-right: 1.5rem;
+  }
+}
+@media (min-width: 960px) {
+  .header .navBar .navList .navItem {
+    padding: 0.7rem;
+  }
+}/*# sourceMappingURL=navbar.css.map */

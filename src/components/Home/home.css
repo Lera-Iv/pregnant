@@ -1,0 +1,69 @@
+:root {
+  --primaryColor: rgb(246, 112, 9);
+  --hoverColor: rgb(203, 94, 11);
+  --whiteColor: rgb(255, 255, 255);
+  --blackColor: rgb(46, 46, 46);
+  --textColor: rgb(121, 121, 124);
+  --whiteColorDeam: rgb(237, 237, 237);
+  --greyBg: rgb(245, 245, 245);
+  --greyText: rgb(190, 190, 190);
+  --imputColor: rgb(248, 246, 247);
+}
+
+.home {
+  height: 75vh;
+  background: linear-gradient(rgba(33, 33, 33, 0.522), rgba(33, 33, 33, 0.523)), url("../../Assets/main4.jpg");
+  background-position: center left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+.home .secContainer .homeText {
+  text-align: center;
+}
+.home .secContainer .homeText .title {
+  color: var(--whiteColor);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+.home .secContainer .homeText .subTitle {
+  color: var(--whiteColor);
+  opacity: 0.9;
+  font-size: 13px;
+  font-weight: 300;
+  padding: 1rem 0;
+  max-width: 70%;
+  text-align: center;
+  margin: auto;
+}
+.home .secContainer .homeText .btn {
+  padding: 0.6rem 1.5rem;
+}
+
+@media (min-width: 720px) {
+  .home .secContainer .homeText {
+    padding: 1rem 7rem;
+  }
+  .home .secContainer .homeText .title {
+    font-size: 2rem;
+    margin: auto;
+    line-height: 3rem;
+  }
+  .home .secContainer .homeText .subTitle {
+    font-size: 1.1rem;
+  }
+  .home .secContainer .homeText .btn {
+    padding: 0.8rem 2rem;
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .home .secContainer .homeText .subTitle {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=home.css.map */

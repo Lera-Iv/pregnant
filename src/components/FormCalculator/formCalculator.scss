@@ -1,0 +1,83 @@
+:root {
+    --primaryColor: rgb(246, 112, 9);
+    --hoverColor: rgb(203, 94, 11);
+    --whiteColor: rgb(255, 255, 255);
+    --blackColor: rgb(46, 46, 46);
+    --textColor: rgb(121, 121, 124);
+    --whiteColorDeam: rgb(237, 237, 237);
+    --greyBg: rgb(245, 245, 245);
+    --greyText: rgb(190, 190, 190);
+    --imputColor: rgb(248, 246, 247);
+}
+
+.homeCalculator {
+    width: 45%;
+    border-radius: 1rem;
+    border: 2px solid var(--greyText);
+    padding: 2rem;
+    background: var(--whiteColor);
+    position: absolute;
+    top: 8rem;
+    left: -500%;
+    gap: 1rem;
+    justify-content: center;
+    transform: translate(-50%);
+    z-index: 100;
+    transition: 1s ease;
+
+    .genderDiv,
+    .periodDiv {
+        width: 100%;
+
+        label {
+            display: block;
+            color: var(--textColor);
+            font-weight: 500;
+            font-size: 13px;
+            padding-bottom: .7rem;
+            margin-top: .4rem;
+        }
+
+        input, select {
+            width: 100%;
+            background: var(--imputColor);
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+            font-size: 13px;
+            font-weight: 500;
+
+            &::placeholder {
+                font-size: 13px;
+                opacity: 0.5;
+                font-weight: 400;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .btn {
+        width: 100%;
+        padding: .6rem 1.5rem;
+        color: var(--whiteColor);
+        font-weight: 600;
+    }
+}
+
+.active {
+    left: 50%;
+}
+
+
+.closeForm {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--primaryColor);
+    &:hover {
+        color: var(--hoverColor);
+    }
+}

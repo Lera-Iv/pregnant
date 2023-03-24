@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import './app.css';
+import Home from "./components/Home/Home";
+import Navbar from "./components/Navbar/Navbar";
+import { fetchPregnant } from './utils/fetchPregnant';
+import Fetal from "./components/Fetal/Fetal";
+import FormCalculator from "./components/FormCalculator/FormCalculator";
+import Preloader from "./components/Preloader/Preloader";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+const App = () => {
+    const [pregnant, setPregnant] = useState(null);
+    const [selectedWeek, setSelectedWeek] = useState(null);
+
+    useEffect(() => {
+        fetchPregnant().then(({ pregnacy: weeks }) => {
+            setPregnant(weeks);
+            setSelectedWeek(weeks.find(({ id }) => {
+                return id === 1;
+            }))
+        });
+    }, []);
+
+    const handleWeekClick = (weekNumber) => {
+        setSelectedWeek(pregnant.find(({ id }) => {
+            return id === weekNumber;
+        }))
+    }
+    
+    return (
+        <>
+            <Navbar />
+            {pregnant ? <Home /> : <Preloader />}
+            <FormCalculator pregnantAgeUser={handleWeekClick}></FormCalculator>
+            <Fetal selectedWeek={selectedWeek} onWeekCLick={handleWeekClick} />
+        </>
+    )
 }
 
-export default App;
+export default App

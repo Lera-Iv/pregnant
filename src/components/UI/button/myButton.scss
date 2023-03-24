@@ -1,0 +1,17 @@
+.btn {
+    padding: .4rem 2rem;
+    background: var(--primaryColor);
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--hoverColor);
+}
+
+.btn a {
+    color: var(--whiteColor);
+    font-weight: 500;
+}

@@ -1,0 +1,14 @@
+.blog {
+    padding-top: 5rem;
+    background: linear-gradient(rgba(33, 33, 33, 0.522), rgba(33, 33, 33, 0.523)), url('../..//Assets/main4.jpg');
+    background-position: center left;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .mainContainer {
+        padding-top: 2rem;
+        .grid {
+            gap: 1rem;
+        }
+    }
+}

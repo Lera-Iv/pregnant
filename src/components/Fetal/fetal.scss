@@ -1,0 +1,144 @@
+:root {
+    --primaryColor: rgb(246, 112, 9);
+    --hoverColor: rgb(203, 94, 11);
+    --whiteColor: rgb(255, 255, 255);
+    --blackColor: rgb(46, 46, 46);
+    --textColor: rgb(121, 121, 124);
+    --whiteColorDeam: rgb(237, 237, 237);
+    --greyBg: rgb(245, 245, 245);
+    --greyText: rgb(190, 190, 190);
+    --imputColor: rgb(248, 246, 247);
+    // --boxShadow: box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+}
+
+
+.fetalSection {
+    padding-top: 2rem;
+
+    .secContainer {
+        .secHeader {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .textDiv {
+            .secTitle {
+                color: var(--blackColor);
+                line-height: 1.5rem;
+                padding-bottom: .5rem;
+            }
+
+            p {
+                font-size: 13px;
+                color: var(--textColor);
+                font-weight: 500;
+            }
+        }
+
+        .iconsDiv {
+            gap: .5rem;
+
+            .icon {
+                padding: .5rem;
+                background: var(--greyText);
+                border-radius: 50%;
+                font-size: 2.5rem;
+
+                &:hover {
+                    background: var(--blackColor);
+                    color: var(--whiteColor);
+
+                }
+            }
+
+            .leftIcon {
+                background: var(--blackColor);
+                color: var(--whiteColor);
+
+                &:hover {
+                    background: var(--greyText);
+                    color: var(--whiteColor);
+                }
+            }
+        }
+    }
+
+    .mainContent {
+        padding: 2rem 2rem;
+        gap: 3rem;
+
+
+        .singleComponentFetal {
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+        }
+
+        .fetalImage {
+            height: 250px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background: var(--greyText);
+
+            img {
+                width: 100%;
+                height:100%;
+                
+                object-fit: cover;
+            }
+        }
+
+        .fetalFooter {
+            padding: 1rem;
+            border-top: 2px solid var(--greyText);
+            background: var(--greyBg);
+
+            .title {
+                font-size: 1rem;
+                font-weight: 700;
+                color: var(--blackColor);
+                position: relative;
+                width: max-content;
+                margin: 0 auto;
+            }
+
+            .fetalText {
+                grid-template-rows: repeat(2, 1fr);
+                justify-items: start;
+
+                
+                p {
+                    color: var(--blackColor);
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .fetalSection {
+        padding-top: 2rem;
+
+        .mainContent {
+            padding: 2rem 4rem;
+            gap: 5rem;
+        }
+
+        .secContainer {
+            .secHeader {
+                .textDiv {
+                    .secTitle {
+                        font-size: 1.7rem;
+                    }
+
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
