@@ -46,7 +46,7 @@ const Navbar = () => {
                     <div className={active}>
                         <ul className="navList flex">
                             <li className="navItem">
-                                <NavLink to="/" className="navLink">Home</NavLink>
+                                <Link to="/" className="navLink">Home</Link>
                             </li>
 
                             <li className="navItem">
