@@ -3,12 +3,12 @@ import './formCalculator.css';
 import { IoIosCloseCircle } from 'react-icons/io';
 import { useDispatch, useSelector } from "react-redux";
 import { setFormNotActive } from '../../redux/formCalculator/formCalculatorSlice';
-import {useForm} from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 
 
 
 
-const FormCalculator = ({pregnantAgeUser}) => {
+const FormCalculator = ({ pregnantAgeUser }) => {
     const [lastPeriod, setLastPeriod] = useState('');
     const [weeks, setWeeks] = useState();
     const [days, setDays] = useState();
@@ -16,14 +16,18 @@ const FormCalculator = ({pregnantAgeUser}) => {
     const today = new Date();
     const dispatch = useDispatch();
     const formActive = useSelector((state) => state.form.formActive);
-    
+
+    const setScrollBy = () => {
+        window.scrollBy(0, 480);
+    };
+
     const {
         register,
-        formState: {errors, isValid},
+        formState: { errors, isValid },
         handleSubmit,
     } = useForm({
         mode: 'all'
-    }); 
+    });
 
     const onSubmit = (data) => {
         setLastPeriod(lastPeriod);
@@ -58,7 +62,7 @@ const FormCalculator = ({pregnantAgeUser}) => {
         setDays(daysPreg);
         setShowResult(true);
     }
-    
+
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={formActive}>
@@ -78,8 +82,8 @@ const FormCalculator = ({pregnantAgeUser}) => {
                 })} type='date' />
             </div>
 
-            {errors?.lastPeriod && <p style={{color: 'red'}}>{errors.lastPeriod?.message || 'Error' }</p>}
-            <button type='submit' disabled={!isValid}  onClick={calculate} className="btn">Calculate</button>
+            {errors?.lastPeriod && <p style={{ color: 'red' }}>{errors.lastPeriod?.message || 'Error'}</p>}
+            <button type='submit' disabled={!isValid} onClick={calculate} className="btn">Calculate</button>
 
             <div onClick={(e) => { dispatch(setFormNotActive()) }} className="closeForm">
                 <IoIosCloseCircle className="icon" />
@@ -88,7 +92,7 @@ const FormCalculator = ({pregnantAgeUser}) => {
                 <div>
                     <div className="resultOfCalculate">
                         <p>Congratulations! You are {weeks} weeks and {days} days pregnant </p>
-                        <button onClick={() => {pregnantAgeUser(weeks); dispatch(setFormNotActive()); setShowResult(false)}} className="btn">Continue</button>
+                        <button onClick={() => { pregnantAgeUser(weeks); dispatch(setFormNotActive()); setShowResult(false); setScrollBy() }} className="btn">Continue</button>
                     </div>
                 </div>
             )}

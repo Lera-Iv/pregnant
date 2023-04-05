@@ -3,36 +3,33 @@ import './slider.css';
 const WEEKS = new Array(40).fill(1).map((_, index) => index + 1)
 
 
-const Slider = ({onWeekCLick}) => {
+const Slider = ({ onWeekCLick }) => {
     const slider = useRef(null);
     const [prev, setPrev] = useState(false);
     const [next, setNext] = useState(false);
     const [activeElSlider, setActiveElSlider] = useState(1);
+    const [position, setPosition] = useState(-500);
 
-
-
-    let position = 0;
 
     const prevHandler = () => {
-        if (position === 0) {
+        if (position === -500) {
             setPrev(true);
         } else {
-            position += 500
-            setPrev(false);
+            setPosition(position + 500)
+            setPrev(false); 
             slider.current.childNodes.forEach((element) => {
-                element.style = `transform: translateX(${position}px)`
+                element.style = `transform: translateX(${position + 1000}px)`
             })
         }
     }
-
 
     const nextHandler = () => {
         if (position <= -(WEEKS.length - 6) * 110) {
             setNext(false);
         } else {
             setNext(false);
-            setPrev(false)
-            position -= 500
+            setPrev(false);
+            setPosition(position - 500);
             slider.current.childNodes.forEach((element) => {
                 element.style = `transform: translateX(${position}px)`
             })
@@ -41,8 +38,6 @@ const Slider = ({onWeekCLick}) => {
 
     const activeElemSlider = (item) => {
         setActiveElSlider(item);
-        console.log(item)
-        
     }
 
 
@@ -51,7 +46,7 @@ const Slider = ({onWeekCLick}) => {
             <div className="sliderTrack flex" ref={slider}>
                 {WEEKS.map((item) => {
                     return (
-                        <div key={item} className={ activeElSlider === item ? 'sliderItem active' : 'sliderItem'}   onClick={() => {activeElemSlider(item);onWeekCLick(item)}} >{item}</div>
+                        <div key={item} className={activeElSlider === item ? 'sliderItem active' : 'sliderItem'} onClick={() => { activeElemSlider(item); onWeekCLick(item) }} >{item}</div>
                     )
                 })}
             </div>

@@ -1,21 +1,21 @@
 import React from "react";
 import './todoItem.css';
 import { useDispatch } from "react-redux";
-import {toggleComplete} from '../../redux/chekList/todoSlice'
+import { toggleStatus } from '../../redux/chekList/todoSlice'
 
-const TodoItem = ({title, completed, id}) => {
+const TodoItem = ({ title, completed, id }) => {
     const dispatch = useDispatch();
 
     return (
         <li>
-                <input className="custom-checkbox"
+            <input className="custom-checkbox"
+                id={id}
                 type='checkbox'
                 checked={completed}
-                readOnly
-                onChange={() => dispatch(toggleComplete({id}))}
-                />   
-                <label>{title}</label>
-            
+                onChange={() => dispatch(toggleStatus(id))}
+            />
+            <label for={id}>{title}</label>
+
 
         </li>
     )
